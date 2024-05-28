@@ -2,11 +2,10 @@ const newProfilePicUrl = 'https://i.redd.it/k2s4a14t2if51.png';
 
 function replaceProfilePictures() {
 
-    const profilePics = document.querySelectorAll('img[src*="profile"], img[class*="profile"], img[src*="avatar"], img[class*="avatar"]');
+    const profilePics = document.querySelectorAll('img[src*="profile"], img[class*="profile"], img[src*="avatar"], img[class*="avatar"], img[class*="da-card"]');
 
     profilePics.forEach(pic => {
         pic.src = newProfilePicUrl;
- 
         if (pic.srcset) {
             pic.srcset = newProfilePicUrl;
         }
